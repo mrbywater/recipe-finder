@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import { RecipeDetailsProps, RecipeDetailsType } from '@/app/recipes/[id]/types';
+import { RecipeDetailsComponentProps, RecipeDetailsType } from '@/app/recipes/[id]/types';
 
-export default async function RecipeDetailsComponent({ params }: RecipeDetailsProps) {
-  const { id } = await params;
-
+export default async function RecipeDetailsComponent({ id }: RecipeDetailsComponentProps) {
   const res = await fetch(
     `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.SPOONACULAR_API_KEY}`
   );

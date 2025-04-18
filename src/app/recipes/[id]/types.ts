@@ -15,3 +15,7 @@ export type RecipeDetailsProps = {
     id: string;
   };
 };
+
+export type RecipeDetailsComponentProps = {
+  id: string;
+};
