@@ -2,7 +2,6 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { ParamsType } from '@/app/types';
-import Loading from '@/components/Loading';
 
 export default function Home() {
   const router = useRouter();

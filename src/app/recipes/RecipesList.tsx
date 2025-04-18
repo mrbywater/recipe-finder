@@ -5,7 +5,8 @@ import { Recipe, RecipesProps } from '@/app/recipes/types';
 export const revalidate = 60;
 
 export default async function RecipesList({ searchParams }: RecipesProps) {
-  const { query, cuisine, preparationTime } = searchParams;
+  const searchParamsData = await searchParams;
+  const { query, cuisine, preparationTime } = searchParamsData;
 
   const params = new URLSearchParams();
   if (query) params.set('query', query);

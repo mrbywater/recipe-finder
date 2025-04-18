@@ -5,7 +5,7 @@ import RecipeDetails from '@/app/recipes/[id]/RecipeDetails';
 import Loading from '@/components/Loading';
 import { Suspense } from 'react';
 
-export default async function RecipeDetailsPage({ params }: RecipeDetailsProps) {
+export default function RecipeDetailsPage({ params }: RecipeDetailsProps) {
   return (
     <div className="min-h-screen p-8 bg-white">
       <BackButton />

@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import Loading from '@/components/Loading';
 import RecipesList from '@/app/recipes/RecipesList';
 
-export default async function RecipesPage({ searchParams }: RecipesProps) {
+export default function RecipesPage({ searchParams }: RecipesProps) {
   return (
     <div className="min-h-screen p-8 bg-gray-50">
       <div className="flex items-center mb-6">
