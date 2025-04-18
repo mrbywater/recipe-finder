@@ -17,7 +17,14 @@ export default async function RecipeDetailsComponent({ id }: RecipeDetailsCompon
       <h1 className="text-lg md:text-3xl font-bold text-gray-600 mt-4 mb-2">{recipe.title}</h1>
 
       <div className="relative max-w-md h-64 mb-6">
-        <Image src={recipe.image} alt={recipe.title} fill className="object-cover rounded-lg" />
+        <Image
+          src={recipe.image}
+          alt={recipe.title}
+          fill
+          sizes="(max-width: 768px) 50vw, 40vw"
+          priority
+          className="object-cover rounded-lg"
+        />
       </div>
 
       <div className="mb-6">

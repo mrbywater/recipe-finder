@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import BackButton from '@/components/BackButton';
 import { RecipeDetailsProps } from '@/app/recipes/[id]/types';
 import Loading from '@/components/Loading';

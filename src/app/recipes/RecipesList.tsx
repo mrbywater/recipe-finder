@@ -38,7 +38,14 @@ export default async function RecipesList({ searchParams }: RecipesProps) {
           className="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
         >
           <div className="relative w-full h-48">
-            <Image src={r.image} alt={r.title} fill className="object-cover" />
+            <Image
+              src={r.image}
+              alt={r.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 40vw"
+              priority
+            />
           </div>
           <div className="p-4">
             <h2 className="text-lg font-semibold text-gray-600 truncate" title={r.title}>
