@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { RecipeDetailsProps, RecipeDetailsType } from '@/app/recipes/[id]/types';
 
-export default async function RecipeDetailsComponent({ params }: RecipeDetailsProps) {
+export default async function RecipeDetails({ params }: RecipeDetailsProps) {
   const { id } = await params;
 
   const res = await fetch(
@@ -9,7 +9,7 @@ export default async function RecipeDetailsComponent({ params }: RecipeDetailsPr
   );
 
   if (!res.ok) {
-    throw new Error('Ошибка при загрузке данных о рецепте');
+    throw new Error(`Error: ${res.statusText}`);
   }
 
   const recipe: RecipeDetailsType = await res.json();

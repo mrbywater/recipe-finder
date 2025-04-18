@@ -45,7 +45,7 @@ export default function Home() {
             <select
               value={cuisine}
               onChange={(e) => setCuisine(e.target.value)}
-              className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-gray-600 p-2"
+              className="mt-1 block w-full rounded-lg cursor-pointer border-gray-300 shadow-sm text-gray-600 p-2"
             >
               <option value="">-- Select --</option>
               <option value="Italian">Italian</option>
@@ -70,7 +70,7 @@ export default function Home() {
         <button
           onClick={handleNext}
           disabled={!enabled}
-          className={`mt-6 w-full py-2 rounded-lg text-white transition font-semibold ${enabled ? 'bg-blue-500 hover:bg-blue-400' : ' bg-gray-400 '} `}
+          className={`mt-6 w-full py-2 rounded-lg text-white transition cursor-pointer font-semibold ${enabled ? 'bg-blue-500 hover:bg-blue-400' : ' bg-gray-400 '} `}
         >
           Next
         </button>

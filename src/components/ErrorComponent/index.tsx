@@ -16,8 +16,8 @@ export default function ErrorComponent({ error, reset }: ErrorProps) {
       <div className="flex gap-3  text-white">
         <BackButton />
         <button
-          className="px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded  transition"
-          onClick={() => reset()}
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded cursor-pointer transition"
+          onClick={reset}
         >
           Попробовать снова
         </button>

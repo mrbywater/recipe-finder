@@ -19,14 +19,14 @@ export default async function RecipesList({ searchParams }: RecipesProps) {
   );
 
   if (!res.ok) {
-    throw new Error(`Ошибка при загрузке рецептов: ${res.statusText}`);
+    throw new Error(`Error: ${res.statusText}`);
   }
 
   const data: { results: Recipe[] } = await res.json();
   const recipes = data.results;
 
   if (recipes?.length === 0) {
-    return <p className="text-gray-600">Ничего не найдено.</p>;
+    return <p className="text-gray-600">Nothing found.</p>;
   }
 
   return (
