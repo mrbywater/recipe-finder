@@ -16,7 +16,7 @@ export default function Home() {
   }, [query, cuisine, preparationTime]);
 
   const handleNext = () => {
-    let params: ParamsType = {};
+    const params: ParamsType = {};
     if (query) params.query = query;
     if (cuisine) params.cuisine = cuisine;
     if (preparationTime) params.preparationTime = preparationTime;

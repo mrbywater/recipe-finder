@@ -33,7 +33,7 @@ export default async function RecipesList({ searchParams }: RecipesProps) {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
       {recipes.map((r, index) => (
         <Link
-          key={r.id}
+          key={index}
           href={`/recipes/${r.id}`}
           className="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
         >
