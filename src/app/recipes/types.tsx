@@ -5,9 +5,9 @@ export type Recipe = {
 };
 
 export type RecipesProps = {
-  searchParams: {
+  searchParams: Promise<{
     query?: string;
     cuisine?: string;
     preparationTime?: string;
-  };
+  }>;
 };

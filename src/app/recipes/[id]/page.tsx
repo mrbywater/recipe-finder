@@ -4,14 +4,12 @@ import Loading from '@/components/Loading';
 import { Suspense } from 'react';
 import RecipeDetailsComponent from '@/app/recipes/[id]/RecipeDetailsComponent';
 
-export default async function RecipeDetailsPage({ params }: RecipeDetailsProps) {
-  const { id } = await params;
-
+export default function RecipeDetailsPage({ params }: RecipeDetailsProps) {
   return (
     <div className="min-h-screen p-8 bg-white">
       <BackButton />
       <Suspense fallback={<Loading />}>
-        <RecipeDetailsComponent id={id} />
+        <RecipeDetailsComponent params={params} />
       </Suspense>
     </div>
   );

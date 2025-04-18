@@ -11,11 +11,7 @@ export type RecipeDetailsType = {
 };
 
 export type RecipeDetailsProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
-};
-
-export type RecipeDetailsComponentProps = {
-  id: string;
+  }>;
 };
